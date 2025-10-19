@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "./../assets/invitation.png";
 
@@ -16,6 +16,15 @@ const invitationData = [
 
 export default function InvitationCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect screen width
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 640);
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const prevSlide = () => {
     setCurrentIndex(
@@ -34,33 +43,38 @@ export default function InvitationCarousel() {
       {/* Left Arrow */}
       <button
         onClick={prevSlide}
-        className="absolute left-0 z-20 p-2 bg-white rounded-full shadow hover:bg-gray-100 transition"
+        className="absolute left-2 z-20 p-2 bg-white rounded-full shadow hover:bg-gray-100 transition"
       >
-        <ChevronLeft size={24} />
+        <ChevronLeft size={isMobile ? 20 : 24} />
       </button>
 
       {/* Carousel */}
-      <div className="relative w-full h-100 flex justify-center items-center">
+      <div className="relative w-full h-100 flex justify-center items-center overflow-hidden">
         {invitationData.map((item, index) => {
           let offset = index - currentIndex;
 
           // Handle circular wrapping
-          if (offset < -Math.floor(invitationData.length / 2)) offset += invitationData.length;
-          if (offset > Math.floor(invitationData.length / 2)) offset -= invitationData.length;
+          if (offset < -Math.floor(invitationData.length / 2))
+            offset += invitationData.length;
+          if (offset > Math.floor(invitationData.length / 2))
+            offset -= invitationData.length;
 
           const isCenter = offset === 0;
-          const scale = isCenter ? 1 : 0.7;
+          const scale = isCenter ? 1 : isMobile ? 0.8 : 0.7;
           const zIndex = isCenter ? 20 : 10;
-          const translateX = offset * 100;
-          const translateY = Math.abs(offset) * 20;
 
-          // Gradually reduce opacity based on distance from center
+          // Reduce distance between cards on mobile
+          const translateX = offset * (isMobile ? 80 : 100);
+          const translateY = Math.abs(offset) * (isMobile ? 10 : 20);
+
           const opacity = isCenter ? 1 : Math.max(0, 1 - Math.abs(offset) * 0.15);
 
           return (
             <div
               key={item.id}
-              className="absolute w-64 h-100 rounded-xl shadow-lg transition-transform duration-500 overflow-hidden"
+              className={`absolute rounded-xl shadow-lg transition-transform duration-500 overflow-hidden ${
+                isMobile ? "w-44 h-56" : "w-64 h-100"
+              }`}
               style={{
                 transform: `translateX(${translateX}px) translateY(${translateY}px) scale(${scale})`,
                 zIndex: zIndex,
@@ -77,9 +91,9 @@ export default function InvitationCarousel() {
       {/* Right Arrow */}
       <button
         onClick={nextSlide}
-        className="absolute right-0 z-20 p-2 bg-white rounded-full shadow hover:bg-gray-100 transition"
+        className="absolute right-2 z-20 p-2 bg-white rounded-full shadow hover:bg-gray-100 transition"
       >
-        <ChevronRight size={24} />
+        <ChevronRight size={isMobile ? 20 : 24} />
       </button>
     </div>
   );

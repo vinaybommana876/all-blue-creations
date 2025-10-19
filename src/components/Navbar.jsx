@@ -34,11 +34,11 @@ export default function Navbar() {
       {/* Right Section */}
       <div className="flex items-center gap-5 md:gap-8">
         {/* Desktop Nav Links */}
-        <ul className="hidden md:flex gap-8">
+        <ul className="hidden md:flex gap-5">
           {links.map((link) => (
             <li
               key={link}
-              className="text-gray-800 text-lg cursor-pointer transition-colors duration-300 hover:text-[#e79098]"
+              className="text-gray-800 text-base cursor-pointer transition-colors duration-300 hover:text-[#e79098]"
             >
               {link}
             </li>
