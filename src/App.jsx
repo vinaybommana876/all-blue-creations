@@ -4,7 +4,10 @@ import HeroSection from "./pages/Home/HeroSection";
 import DesignSection from "./pages/Home/DesignSection";
 import Loader from "./components/Loader";
 import Logo from "./assets/prelogo.png";
-import CircularGallery from "./components/CircularGallery";
+import BirthdaySection from "./pages/Home/BirthdaySection";
+import WeddingSection from "./pages/Home/WeddingSection";
+import BabyKidsSection from "./pages/Home/BabyKidsSection";
+import PartySection from "./pages/Home/PartySection";
 
 export default function App() {
   const [initialLoading, setInitialLoading] = useState(true); // for initial preloader
@@ -59,6 +62,10 @@ export default function App() {
       <Navbar />
       <HeroSection />
       <DesignSection />
+      <BirthdaySection />
+      <WeddingSection />
+      <BabyKidsSection />
+      <PartySection />
       
       <button
         onClick={handleAction}
