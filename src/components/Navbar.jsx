@@ -17,7 +17,8 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="w-full flex justify-between items-center px-6 md:px-10 py-4 fixed top-0 left-0 z-50">
+   <nav className="w-full flex justify-between items-center bg-white/30 backdrop-blur-md border-b border-white/40 px-6 md:px-10 py-4 md:py-0 fixed top-0 left-0 z-50">
+
       {/* Left Section: Logo + Brand */}
       <div className="flex items-center gap-3">
         <img
@@ -67,8 +68,8 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="absolute top-full left-0 w-full bg-white/20 backdrop-blur-lg border-t border-white/30 shadow-lg md:hidden">
-          <ul className="flex flex-col items-center gap-5 py-6">
+        <div className="absolute top-full left-0 w-full bg-white/90 backdrop-blur-xl border-t border-white/30 shadow-lg md:hidden">
+          <ul className="flex flex-col items-center font-semibold gap-5 py-6">
             {links.map((link) => (
               <li
                 key={link}

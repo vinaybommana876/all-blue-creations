@@ -39,17 +39,18 @@ export default function InvitationCarousel() {
   };
 
   return (
-    <div className="relative w-full max-w-5xl flex justify-center items-center mt-10">
+    <div className="relative w-full max-w-5xl flex justify-center items-center -mt-10 md:mt-10">
       {/* Left Arrow */}
       <button
         onClick={prevSlide}
-        className="absolute left-2 z-20 p-2 bg-white rounded-full shadow hover:bg-gray-100 transition"
+        className="absolute md:-left-10 left-2 z-2 p-0 rounded-full bg-white/20 backdrop-blur-md border border-white/30 shadow-lg hover:bg-white/80 hover:scale-110 transition-all duration-300"
       >
-        <ChevronLeft size={isMobile ? 20 : 24} />
+        <ChevronLeft size={isMobile ? 30 : 40} className="text-[#e79098]" />
       </button>
 
+
       {/* Carousel */}
-      <div className="relative w-full h-100 flex justify-center items-center overflow-hidden">
+      <div className="relative w-full h-90 md:h-120 flex justify-center items-center overflow-hidden">
         {invitationData.map((item, index) => {
           let offset = index - currentIndex;
 
@@ -64,7 +65,7 @@ export default function InvitationCarousel() {
           const zIndex = isCenter ? 20 : 10;
 
           // Reduce distance between cards on mobile
-          const translateX = offset * (isMobile ? 80 : 100);
+          const translateX = offset * (isMobile ? 40 : 100);
           const translateY = Math.abs(offset) * (isMobile ? 10 : 20);
 
           const opacity = isCenter ? 1 : Math.max(0, 1 - Math.abs(offset) * 0.15);
@@ -72,9 +73,8 @@ export default function InvitationCarousel() {
           return (
             <div
               key={item.id}
-              className={`absolute rounded-xl shadow-lg transition-transform duration-500 overflow-hidden ${
-                isMobile ? "w-44 h-56" : "w-64 h-100"
-              }`}
+              className={`absolute rounded-xl shadow-lg transition-transform duration-500 overflow-hidden ${isMobile ? "w-44 h-56" : "w-64 h-100"
+                }`}
               style={{
                 transform: `translateX(${translateX}px) translateY(${translateY}px) scale(${scale})`,
                 zIndex: zIndex,
@@ -91,9 +91,10 @@ export default function InvitationCarousel() {
       {/* Right Arrow */}
       <button
         onClick={nextSlide}
-        className="absolute right-2 z-20 p-2 bg-white rounded-full shadow hover:bg-gray-100 transition"
+        className="absolute md:-right-10 right-2 z-2 p-0 rounded-full bg-white/20 backdrop-blur-md border border-white/30 shadow-lg hover:bg-white/80 hover:scale-110 transition-all duration-300"
       >
-        <ChevronRight size={isMobile ? 20 : 24} />
+
+        <ChevronRight size={isMobile ? 30 : 40} className="text-[#e79098]" />
       </button>
     </div>
   );

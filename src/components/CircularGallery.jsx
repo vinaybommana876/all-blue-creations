@@ -46,7 +46,7 @@ function createTextTexture(gl, text, font = 'bold 30px monospace', color = 'blac
 }
 
 class Title {
-  constructor({ gl, plane, renderer, text, textColor = '#545050', font = '30px sans-serif' }) {
+  constructor({ gl, plane, renderer, text, textColor = '#f36060ff', font = '30px "Arial Rounded MT Bold", Arial' }) {
     autoBind(this);
     this.gl = gl;
     this.plane = plane;
@@ -300,9 +300,9 @@ class App {
     {
       items,
       bend,
-      textColor = '#ffffff',
+      textColor = '#f36060ff',
       borderRadius = 0,
-      font = 'bold 30px Figtree',
+      font = 'bold 30px',
       scrollSpeed = 2,
       scrollEase = 0.05
     } = {}
@@ -331,11 +331,24 @@ class App {
     this.gl.clearColor(0, 0, 0, 0);
     this.container.appendChild(this.gl.canvas);
   }
-  createCamera() {
+createCamera() {
     this.camera = new Camera(this.gl);
-    this.camera.fov = 45;
+    const screenWidth = window.innerWidth;
+    if (screenWidth <= 768) {
+        // Mobile
+        this.camera.fov = 120;
+    } else if (screenWidth <= 1024) {
+        // Tablet
+        this.camera.fov = 90;
+    } else {
+        // Desktop
+        this.camera.fov = 45;
+    }
     this.camera.position.z = 20;
-  }
+    // Optional: update the camera aspect and projection matrix
+    this.camera.updateProjectionMatrix();
+}
+
   createScene() {
     this.scene = new Transform();
   }
@@ -347,7 +360,7 @@ class App {
   }
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
-      { image: Image3, text: 'Bridge' },
+      { image: Image3, text: 'Birthday' },
       { image: `https://picsum.photos/seed/2/800/600?grayscale`, text: 'Desk Setup' },
       { image: `https://picsum.photos/seed/3/800/600?grayscale`, text: 'Waterfall' },
       { image: `https://picsum.photos/seed/4/800/600?grayscale`, text: 'Strawberries' },
@@ -471,9 +484,9 @@ class App {
 export default function CircularGallery({
   items,
   bend = 3,
-  textColor = '#ffffff',
+  textColor = '#f36060ff',
   borderRadius = 0.05,
-  font = 'bold 30px Figtree',
+  font = 'bold 30px',
   scrollSpeed = 2,
   scrollEase = 0.05
 }) {

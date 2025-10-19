@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import HeroSection from "./pages/Home/HeroSection";
+import DesignSection from "./pages/Home/DesignSection";
 import Loader from "./components/Loader";
 import Logo from "./assets/prelogo.png";
 import CircularGallery from "./components/CircularGallery";
@@ -57,10 +58,8 @@ export default function App() {
       {loading && <Loader />} {/* Loader component */}
       <Navbar />
       <HeroSection />
-      <div style={{ height: '600px', top:'200px', position: 'relative' }}>
-        <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} />
-      </div>
-
+      <DesignSection />
+      
       <button
         onClick={handleAction}
         className="mt-10 mx-auto px-6 py-3 bg-pink-300 rounded-lg hover:bg-pink-400 transition"
