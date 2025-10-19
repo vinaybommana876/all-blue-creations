@@ -1,17 +1,24 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Image from "./../assets/invitation.png";
+// import Image from "./../assets/invitation.png";
+import Image1 from "./../assets/baby&kids.png";
+import Image2 from "./../assets/wedding.png";
+import Image3 from "./../assets/partys.png";
+import Image4 from "./../assets/wedding1.png"
+import Image5 from "./../assets/wedding2.png"
+import Image6 from "./../assets/greetings.png"
+
 
 const invitationData = [
-  { id: 1, image: Image, title: "Birthday" },
-  { id: 2, image: Image, title: "Wedding" },
-  { id: 3, image: Image, title: "Party" },
-  { id: 4, image: Image, title: "Baby Shower" },
-  { id: 5, image: Image, title: "Anniversary" },
-  { id: 6, image: Image, title: "Wedding" },
-  { id: 7, image: Image, title: "Party" },
-  { id: 8, image: Image, title: "Baby Shower" },
-  { id: 9, image: Image, title: "Anniversary" },
+  { id: 1, image: Image1, title: "Birthday" },
+  { id: 2, image: Image2, title: "Wedding" },
+  { id: 3, image: Image3, title: "Party" },
+  { id: 4, image: Image4, title: "Baby Shower" },
+  { id: 5, image: Image6, title: "Anniversary" },
+  { id: 6, image: Image2, title: "Wedding" },
+  { id: 7, image: Image3, title: "Party" },
+  { id: 8, image: Image4, title: "Baby Shower" },
+  { id: 9, image: Image5, title: "Anniversary" },
 ];
 
 export default function InvitationCarousel() {
@@ -73,7 +80,7 @@ export default function InvitationCarousel() {
           return (
             <div
               key={item.id}
-              className={`absolute rounded-xl shadow-lg transition-transform duration-500 overflow-hidden ${isMobile ? "w-44 h-56" : "w-64 h-100"
+              className={`absolute rounded-2xl shadow-lg transition-transform duration-500 overflow-hidden ${isMobile ? "w-44 h-65" : "w-72 h-105"
                 }`}
               style={{
                 transform: `translateX(${translateX}px) translateY(${translateY}px) scale(${scale})`,
