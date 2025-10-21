@@ -12,6 +12,7 @@ import CelebrateMoments from "./pages/Home/CelebrateMoments";
 import ServicesSection from "./pages/Home/ServicesSection";
 import FAQSection from "./pages/Home/FAQSection";
 import TestimonialSection from "./pages/Home/TestimonialSection";
+import FooterSection from "./pages/Home/FooterSection";
 
 export default function App() {
   const [initialLoading, setInitialLoading] = useState(true); // for initial preloader
@@ -84,6 +85,7 @@ export default function App() {
       <ServicesSection /> 
       <FAQSection />
       <TestimonialSection />
+      <FooterSection />
       <button
         onClick={handleAction}
         className="mt-10 mx-auto px-6 py-3 bg-pink-300 rounded-lg hover:bg-pink-400 transition"
