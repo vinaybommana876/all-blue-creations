@@ -1,8 +1,8 @@
 import CurvedLoop from "../../components/CurvedLoop";
 import { ArrowRight, Sparkles } from "lucide-react";
-import BirthdayImage from "../../assets/invitation.png"; // change this path
+import BirthdayImage from "../../assets/wedding.png"; // change this path
 import { motion } from "framer-motion";
-import TiltedCard from "../../components/TiltedCard";
+
 
 export default function BirthdaySection() {
   return (
@@ -97,7 +97,7 @@ export default function BirthdaySection() {
       <div className="w-full md:w-1/2 flex flex-col items-start text-center md:text-left z-10">
         {/* Title */}
        {/* Title */}
-<h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-[#e79098] to-black bg-clip-text text-transparent mb-6">
+<h2 className="text-4xl md:text-5xl p-2 font-extrabold bg-gradient-to-r from-[#e79098] to-black bg-clip-text text-transparent mb-6">
   Your Birthday, Our Magic ✨
 </h2>
 

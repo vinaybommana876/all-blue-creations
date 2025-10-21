@@ -1,6 +1,6 @@
 import CurvedLoop from "../../components/CurvedLoop";
 import { ArrowRight, Sparkles } from "lucide-react";
-import BirthdayImage from "../../assets/invitation.png"; // change this path
+import BirthdayImage from "../../assets/partys.png"; // change this path
 import { motion } from "framer-motion";
 
 export default function PartySection() {
@@ -19,10 +19,10 @@ export default function PartySection() {
       </div>
 
       {/* === Left Side: Image with Magical Stars & Gradient Glow === */}
-      <div className="w-full md:w-1/2 flex flex-col items-start text-center md:text-left z-10 md:pl-50">
+      <div className="w-full md:w-1/2 flex flex-col items-start text-center md:text-left z-10">
         {/* Title */}
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-[#e79098] to-black bg-clip-text text-transparent mb-6">
+        <h2 className="text-4xl md:text-5xl p-2 font-extrabold bg-gradient-to-r from-[#e79098] to-black bg-clip-text text-transparent mb-6">
           Your Birthday, Our Magic ✨
         </h2>
 
