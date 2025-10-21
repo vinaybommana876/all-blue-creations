@@ -67,16 +67,16 @@ export default function App() {
       <Navbar />
       <HeroSection />
       <DesignSection />
-      <div className="mb-20 md:mb-20">
+      <div className="mb-10 md:mb-10">
         <BirthdaySection />
       </div>
-      <div className="mb-10 md:mb-20">
+      <div className="mb-10 md:mb-10">
         <WeddingSection />
       </div>
-      <div className="mb-20 md:mb-20">
+      <div className="mb-10 md:mb-10">
         <BabyKidsSection />
       </div>
-      <div className="-mb-15 md:mb-10">
+      <div className="-mb-10 md:mb-10">
         <PartySection />
       </div>
       <div className="mb-0 md:mb-0">
@@ -86,12 +86,12 @@ export default function App() {
       <FAQSection />
       <TestimonialSection />
       <FooterSection />
-      <button
+      {/* <button
         onClick={handleAction}
         className="mt-10 mx-auto px-6 py-3 bg-pink-300 rounded-lg hover:bg-pink-400 transition"
       >
         Open Something
-      </button>
+      </button> */}
     </div>
   );
 }

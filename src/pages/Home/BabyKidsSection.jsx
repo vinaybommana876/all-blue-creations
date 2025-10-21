@@ -120,7 +120,7 @@ export default function BabyKidsSection() {
 </div>
 
 {/* Description */}
-<p className="text-gray-700 mb-8 leading-relaxed max-w-md mx-auto md:mx-0">
+<p className="text-xs sm:text-sm md:text-base lg:text-base text-gray-700 mb-8 leading-relaxed max-w-md mx-auto md:mx-0">
   Celebrate your special day with love, joy, and a touch of magic! Our beautifully crafted birthday 
   invitations and cards help you share smiles, create unforgettable memories, and make every moment 
   truly magical. Let us turn your birthday into a celebration that your heart will remember forever ✨.

@@ -20,7 +20,7 @@ export default function BirthdaySection() {
       </div>
 
 {/* === Left Side: Image with Magical Stars & Gradient Glow === */}
-<div className="w-full md:w-1/2 py-10 flex justify-center items-center relative">
+<div className="w-full md:w-1/2 py-5 md:py-20 flex justify-center items-center relative">
   {/* === Floating Stars === */}
   <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
     {[...Array(20)].map((_, i) => {
@@ -121,7 +121,7 @@ export default function BirthdaySection() {
 </div>
 
 {/* Description */}
-<p className="text-gray-700 mb-8 leading-relaxed max-w-md mx-auto md:mx-0">
+<p className="text-xs sm:text-sm md:text-base lg:text-base text-gray-700 mb-8 leading-relaxed max-w-md mx-auto md:mx-0">
   Celebrate your special day with love, joy, and a touch of magic! Our beautifully crafted birthday 
   invitations and cards help you share smiles, create unforgettable memories, and make every moment 
   truly magical. Let us turn your birthday into a celebration that your heart will remember forever ✨.

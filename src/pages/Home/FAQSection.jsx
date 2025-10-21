@@ -65,7 +65,7 @@ const FAQSection = () => {
         <h2 className="text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-[#d66f77] to-black bg-clip-text text-transparent py-2">
           Frequently Asked Questions
         </h2>
-        <p className="text-gray-800 max-w-2xl mx-auto">
+        <p className="text-xs sm:text-sm md:text-base lg:text-base text-gray-800 max-w-2xl mx-auto">
           Click a question to see the answer. All answers are designed to help you understand our service quickly.
         </p>
       </div>

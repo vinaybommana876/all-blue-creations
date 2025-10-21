@@ -31,7 +31,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="py-20 px-4 md:px-16">
+    <section className="py-10 px-4 md:px-16">
       <div className="max-w-6xl mx-auto text-center">
         {/* === Heading === */}
         <motion.h2
@@ -46,7 +46,7 @@ const ServicesSection = () => {
           We provide beautiful, easy-to-create digital invitations for you
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
+        <div className="grid grid-cols-1 px-5 md:px-0 md:grid-cols-4 gap-8 mt-12">
           {services.map((service, index) => (
             <motion.div
               key={index}

@@ -23,7 +23,7 @@ const TestimonialSection = () => {
   const averageRating = (testimonials.reduce((sum, t) => sum + t.rating, 0) / testimonials.length).toFixed(1);
 
   return (
-    <section className="py-16 px-4 md:px-12">
+    <section className="py-5 px-4 md:px-12">
       {/* Overall Rating */}
       <div className="max-w-4xl mx-auto text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-[#d66f77] to-black bg-clip-text text-transparent">
@@ -41,11 +41,11 @@ const TestimonialSection = () => {
           </div>
           <span className="text-gray-700">out of 5</span>
         </div>
-        <p className="text-gray-700 mt-2 -mb-16">{testimonials.length}+ reviews</p>
+        <p className="text-xs sm:text-sm md:text-base lg:text-base text-gray-700 mt-2 -mb-16">{testimonials.length}+ reviews</p>
       </div>
 
       {/* Carousel */}
-      <div className="relative max-w-6xl mx-auto">
+      <div className="relative max-w-6xl mx-auto px-2">
         {/* Arrows */}
         <div className="flex justify-end mb-4 gap-2">
           <button
@@ -64,7 +64,7 @@ const TestimonialSection = () => {
 
         <div
           ref={carouselRef}
-          className="flex gap-6 overflow-x-auto scroll-smooth pb-16 scrollbar-hide"
+          className="flex gap-2 md:gap-5 overflow-x-auto scroll-smooth pb-16 scrollbar-hide"
         >
           {testimonials.map((testi, index) => (
             <motion.div

@@ -50,7 +50,7 @@ export default function InvitationCarousel() {
       {/* Left Arrow */}
       <button
         onClick={prevSlide}
-        className="absolute md:-left-10 left-2 z-10 p-0 rounded-full bg-white/20 backdrop-blur-md border border-white/30 shadow-lg hover:bg-white/80 hover:scale-110 transition-all duration-300"
+        className="absolute md:-left-10 left-2 z-11 p-0 rounded-full bg-white/20 backdrop-blur-md border border-white/30 shadow-lg hover:bg-white/80 hover:scale-110 transition-all duration-300"
       >
         <ChevronLeft size={isMobile ? 30 : 40} className="text-[#e79098]" />
       </button>

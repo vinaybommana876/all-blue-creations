@@ -23,7 +23,7 @@ export default function CelebrateMoments() {
     { name: "Haldi ", icon: <Sun className="w-5 h-5" /> },
     { name: "Half Saree", icon: <Heart className="w-5 h-5" /> },
     { name: "Halloween", icon: <Ghost className="w-5 h-5" /> },
-    { name: "Baby Shower", icon: <Baby className="w-5 h-5" /> },
+    { name: "BabyShower", icon: <Baby className="w-5 h-5" /> },
     { name: "Engagement", icon: <Gift className="w-5 h-5" /> },
     { name: "Graduation", icon: <Star className="w-5 h-5" /> },
     { name: "Festival", icon: <PartyPopper className="w-5 h-5" /> },

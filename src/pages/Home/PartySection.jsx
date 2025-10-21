@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function PartySection() {
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-between px-6 md:px-20 gap-10 overflow-hidden">
+    <section className="relative flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 gap-10 overflow-hidden">
       {/* === Curved Scrolling Text Background === */}
       <div className="absolute top-50 left-0 w-full h-[600px] flex items-center text-black justify-center opacity-100 z-0">
         <CurvedLoop
@@ -46,7 +46,7 @@ export default function PartySection() {
         </div>
 
         {/* Description */}
-        <p className="text-gray-700 mb-8 leading-relaxed max-w-md mx-auto md:mx-0">
+        <p className="text-xs sm:text-sm md:text-base lg:text-base text-gray-700 mb-8 leading-relaxed max-w-md mx-auto md:mx-0">
           Celebrate your special day with love, joy, and a touch of magic! Our
           beautifully crafted birthday invitations and cards help you share
           smiles, create unforgettable memories, and make every moment truly

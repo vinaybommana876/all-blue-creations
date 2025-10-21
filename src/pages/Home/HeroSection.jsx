@@ -49,7 +49,7 @@ export default function HeroSection() {
 
       <button
         className="mt-6 sm:mt-8 px-4 sm:px-6 py-2 z-3 sm:py-3 rounded-full text-white text-sm sm:text-base md:text-lg 
-        bg-gradient-to-r from-[#e79098] to-black hover:from-[#d66f77] hover:to-gray-800 transition-all duration-300"
+        bg-gradient-to-r from-[#e79098] to-black hover:from-[#d66f77] hover:to-gray-800 transition-all duration-300 mb-4 md:mb-0"
       >
         Create Your Card
       </button>
