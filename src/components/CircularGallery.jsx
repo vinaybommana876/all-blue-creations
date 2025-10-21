@@ -1,11 +1,11 @@
 import { Camera, Mesh, Plane, Program, Renderer, Texture, Transform } from 'ogl';
 import { useEffect, useRef } from 'react';
-import Image1 from "../assets/baby&kids.png";
-import Image2 from "../assets/wedding.png";
-import Image3 from "../assets/partys.png";
-import Image4 from "../assets/wedding1.png"
-import Image5 from "../assets/wedding2.png"
-import Image6 from "../assets/greetings.png"
+import Image1 from "../assets/Gallery/wedding.png";
+import Image2 from  "../assets/Gallery/baby&kids.png";
+import Image3 from "../assets/Gallery/party.png";
+import Image4 from "../assets/Gallery/baby&kids1.png";
+import Image5 from "../assets/Gallery/trending.png";
+import Image6 from "../assets/Gallery/wedding1.png";
 
 import './css/CircularGallery.css';
 
@@ -365,8 +365,8 @@ class App {
     }
     createMedias(items, bend = 1, textColor, borderRadius, font) {
         const defaultItems = [
-            { image: Image1, text: "Birthday" },
-            { image: Image2, text: "Wedding" },
+            { image: Image1, text: "Wedding" },
+            { image: Image2, text: "Baby&kids" },
             { image: Image3, text: "Party" },
             { image: Image4, text: "Baby Shower" },
             { image: Image5, text: "Anniversary" },

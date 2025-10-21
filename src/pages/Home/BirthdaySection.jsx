@@ -1,6 +1,6 @@
 import CurvedLoop from "../../components/CurvedLoop";
 import { ArrowRight, Sparkles } from "lucide-react";
-import BirthdayImage from "../../assets/wedding.png"; // change this path
+import BirthdayImage from "../../assets/Gallery/birthday.png"; // change this path
 import { motion } from "framer-motion";
 
 
