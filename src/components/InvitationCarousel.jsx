@@ -57,7 +57,7 @@ export default function InvitationCarousel() {
 
 
       {/* Carousel */}
-      <div className="relative w-full h-90 md:h-120 flex justify-center items-center overflow-hidden">
+      <div className="relative w-full h-90 lg:h-120 flex justify-center items-center overflow-hidden">
         {invitationData.map((item, index) => {
           let offset = index - currentIndex;
 

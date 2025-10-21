@@ -8,6 +8,10 @@ import BirthdaySection from "./pages/Home/BirthdaySection";
 import WeddingSection from "./pages/Home/WeddingSection";
 import BabyKidsSection from "./pages/Home/BabyKidsSection";
 import PartySection from "./pages/Home/PartySection";
+import CelebrateMoments from "./pages/Home/CelebrateMoments";
+import ServicesSection from "./pages/Home/ServicesSection";
+import FAQSection from "./pages/Home/FAQSection";
+import TestimonialSection from "./pages/Home/TestimonialSection";
 
 export default function App() {
   const [initialLoading, setInitialLoading] = useState(true); // for initial preloader
@@ -62,11 +66,24 @@ export default function App() {
       <Navbar />
       <HeroSection />
       <DesignSection />
-      <BirthdaySection />
-      <WeddingSection />
-      <BabyKidsSection />
-      <PartySection />
-      
+      <div className="mb-20 md:mb-20">
+        <BirthdaySection />
+      </div>
+      <div className="mb-10 md:mb-20">
+        <WeddingSection />
+      </div>
+      <div className="mb-20 md:mb-20">
+        <BabyKidsSection />
+      </div>
+      <div className="-mb-15 md:mb-10">
+        <PartySection />
+      </div>
+      <div className="mb-0 md:mb-0">
+        <CelebrateMoments />
+      </div>
+      <ServicesSection /> 
+      <FAQSection />
+      <TestimonialSection />
       <button
         onClick={handleAction}
         className="mt-10 mx-auto px-6 py-3 bg-pink-300 rounded-lg hover:bg-pink-400 transition"
